@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Receitas Hario v60</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="landing-page" id="landing-page">
+        <button onclick="showRecipe()">Gerar Nova Receita ☕</button>
+    </div>
+    <div class="container hidden" id="recipe-page">
+        <div class="controls-container">
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="coffee-grams">gramas de café:</label>
+                    <input type="number" id="coffee-grams" placeholder="15-30g (deixe em branco para aleatório)">
+                </div>
+                <div class="input-field">
+                    <label for="total-pours">número de jogadas:</label>
+                    <input type="number" id="total-pours" placeholder="2-6 (deixe em branco para aleatório)" min="2" max="6">
+                </div>
+            </div>
+            <button onclick="showRecipe()">Gerar Nova Receita ☕</button>
+        </div>
+        <div class="recipe-container">
+            <div class="variables">
+                <h2>RECEITA 🧾</h2>
+                <ul class="variables-list" id="variables"></ul>
+            </div>
+            <div class="steps">
+                <h2>PASSO A PASSO</h2>
+                <ol class="steps-list" id="steps"></ol>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
